@@ -1,0 +1,440 @@
+/* General Reset */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Fondo animado para la barra de inicio (header) */
+header {
+    position: relative;
+    background: linear-gradient(90deg, #1e90ff, #3a3a5c, #1e1e2f);
+    background-size: 300% 300%;
+    animation: headerAnimation 6s infinite;
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+/* Animación para el fondo del header */
+@keyframes headerAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ajustes de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #1e90ff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: black; /* Fallback en caso de que el video no cargue */
+}
+
+/* Video de fondo */
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+/* Contenido superpuesto */
+.hero-content {
+    z-index: 1; /* Coloca el texto encima del video */
+    position: relative;
+    padding: 20px;
+}
+
+/* Título animado */
+.animated-title {
+    font-size: 4rem; /* Tamaño grande del texto */
+    font-weight: bold;
+    color: #1e90ff;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    animation: slideIn 1.5s ease-out forwards, glow 2s infinite alternate;
+}
+
+/* Subtítulo animado */
+.animated-subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s 0.5s ease-out forwards;
+}
+
+/* Botón */
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0078e7;
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7), 0 0 10px #1e90ff, 0 0 20px #1e90ff, 0 0 30px #1e90ff;
+    }
+    100% {
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7), 0 0 20px #1e90ff, 0 0 30px #1e90ff, 0 0 40px #1e90ff;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Products Section */
+.products-section {
+    position: relative;
+    padding: 40px 20px;
+    background: linear-gradient(45deg, #1e90ff, #3a3a5c, #1e1e2f);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s infinite;
+    color: white;
+}
+
+.products-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Animación del fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contenedor de productos */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 calc(25% - 40px);
+    max-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el nombre del producto */
+.product-name {
+    font-size: 18px;
+    color: #000;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos para la descripción del producto */
+.product-description {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin: 5px 10px;
+    line-height: 1.4;
+}
+
+/* Estilos para el precio */
+.product-price {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+button.add-to-cart {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover {
+    background-color: #0078e7;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+    color: white;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+    color: white;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1e90ff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal */
+.cart-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cart-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.cart-modal-content h2 {
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#checkout-btn,
+#close-modal {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#checkout-btn {
+    background-color: #1e90ff;
+    color: white;
+}
+
+#checkout-btn:hover {
+    background-color: #0078e7;
+}
+
+#close-modal {
+    background-color: #f44336;
+    color: white;
+}
+
+#close-modal:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-section textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-section button {
+    background-color: #1e90ff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.contact-section button:hover {
+    background-color: #0078e7;
+}
+
+#form-response {
+    margin-top: 15px;
+    font-size: 16px;
+    color: green;
+}
+
+#form-response.hidden {
+    display: none;
+}
+
+/* Redes Sociales */
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+    margin-top: 20px;
+}
