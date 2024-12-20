@@ -32,17 +32,21 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero">
-    <video autoplay muted loop id="hero-video">
+<section id="home" class="hero">
+    <div class="hero-box">
+        <div class="hero-content">
+            <h1 class="animated-title">Bienvenido a E-Tech</h1>
+            <p class="animated-subtitle">Los mejores productos electrónicos al mejor precio.</p>
+            <a href="#products" class="cta-btn">Ver Productos</a>
+        </div>
+    </div>
+    <video muted autoplay loop>
         <source src="videos/background-video.mp4" type="video/mp4">
         Tu navegador no soporta videos HTML5.
     </video>
-    <div class="hero-content">
-        <h1 class="animated-title">Bienvenido a E-Tech</h1>
-        <p class="animated-subtitle">Los mejores productos electrónicos al mejor precio.</p>
-        <a href="#products" class="cta-btn">Ver Productos</a>
-    </div>
+    <div class="capa"></div>
 </section>
+
         <!-- Products Section -->
         <section id="products" class="products-section">
             <h2>Nuestros Productos</h2>
@@ -87,7 +91,7 @@
 </div>
 
         <!-- Contact Section -->
-        <section class="contact-section">
+<section id="contact" class="contact-section">
     <h2>Contáctanos</h2>
     <form id="contact-form">
         <input type="text" id="name" placeholder="Nombre" required>
@@ -96,8 +100,10 @@
         <button type="submit">Enviar</button>
     </form>
     <p id="form-response" class="hidden"></p>
+</section>
     
-    <!-- Redes Sociales -->
+<!-- Redes Sociales -->
+<section class="social-media-section">
     <div class="social-media">
         <a href="https://facebook.com" target="_blank">
             <img src="images/facebook-icon.png" alt="Facebook">
@@ -110,6 +116,7 @@
         </a>
     </div>
 </section>
+
 
 
     <!-- Footer -->
